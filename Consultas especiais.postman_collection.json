@@ -1,0 +1,96 @@
+{
+  "info": {
+    "_postman_id": "a21adebd-9abd-4c12-9302-c099e16dc1cb",
+    "name": "Consultas especiais",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "35688956"
+  },
+  "item": [
+    {
+      "name": "Agendamentos de uma data específica",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agendamentos/data/2026-05-28",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos",
+            "data",
+            "2026-05-28"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consulta pelo nome de um cliente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agendamentos/data/2026-05-28",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos",
+            "data",
+            "2026-05-28"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agendamentos de uma sala, data e hora",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agendamentos/data/2026-05-28",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos",
+            "data",
+            "2026-05-28"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agendamentos de uma sala específica em um dia específico",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agendamentos/data/2026-05-26/sala/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "agendamentos",
+            "data",
+            "2026-05-26",
+            "sala",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
