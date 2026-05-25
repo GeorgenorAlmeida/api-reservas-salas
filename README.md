@@ -71,7 +71,8 @@ Requisitos Funcionais Especiais da API
 1. Sistema deverá consultar todos os agendamentos de uma sala específica;
 2. Sistema deverá consultar a disponibilidade de uma sala específica e também por data e hora (escolhida por um cliente);
 3. Sistema deverá consultar todos os horários agendados de uma sala em um determinado dia;
-4. Sistema deverá listar clientes através de busca pelo nome;
+4. Toda e qualquer consulta de agendamentos que ão retornar registros significa que a determinada sala e horrário não possui agendamento;
+5. Sistema deverá listar clientes através de busca pelo nome;
 
 
 
