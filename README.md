@@ -74,5 +74,33 @@ Requisitos Funcionais Especiais da API
 4. Toda e qualquer consulta de agendamentos que ão retornar registros significa que a determinada sala e horrário não possui agendamento;
 5. Sistema deverá listar clientes através de busca pelo nome;
 
+Instruções para Execução
+========================
+1. Instale o Java JDK (Java 17 ou compatível) : https://adoptium.net/
+2. Instale o IntelliJ : https://www.jetbrains.com/idea/
+3. Instale o Git : https://git-scm.com/
+4. Instale o Postman : https://www.postman.com/downloads/
+5. Baixe o projeto do GitHub e execute via erminal : git clone https://github.com/SEU_USUARIO/api-reservas-salas.git
+6. Abra o IntelliJ IDEA
+7. Abra o projeto e selecione a pasta baixada do GitHub
+8. Aguarde o Mavem carregar as dependências
+9. Execute a Classe principal Reservaspplication.java
+10. Com a classe principal em execução, acesse: http://localhost:8080/h2-console
+11. Configurações do h2 (url: jdbc:h2:mem:testdb, user: sa, password: (em branco))
+12. Testar APIs no PostMan (Pasta DOCs com as documentações)
+
+Conclusões e Potenciais Implementações de melhoria
+==================================================
+Durante o desenvolvimento, considerei que a proposta apontava mais para um ambiente de trabalhos de dados e programação
+Back-end. Então o sistema tem bastante potencial de avançar para programações de equipes de Front-end. Onde poderão ser construídas 
+telas, formulários, menus, suspensos, exibição de tabelas e controles de edição de registros (CRUD).
+Além dsto, o sistema pode também evolir para a criação de módulos de segurança com login e senha, validação de dois ffatores
+personalização com desingn e logomarca da empresa. Tudo de forma estruturada para a satisfação do cliente.
+
+Espero que tenha atendido as expectativas.
+
+**Georgenor Almeida**
+**Analista de Sistemas**
+
 
 
