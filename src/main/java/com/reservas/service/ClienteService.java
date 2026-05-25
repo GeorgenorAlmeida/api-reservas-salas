@@ -3,12 +3,16 @@ package com.reservas.service;
 
 import com.reservas.entity.Cliente;
 import com.reservas.repository.ClienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ClienteService {
+
+    @Autowired
+    private ClienteRepository clienteRepository;
 
     private final ClienteRepository repository;
 
@@ -76,4 +80,16 @@ public class ClienteService {
 
         repository.delete(cliente);
     }
+
+    public List<Cliente> consultarPorNome(String nome) {
+
+        List<Cliente> clientes = clienteRepository.findByNomeContainingIgnoreCase(nome);
+
+        if (clientes.isEmpty()) {
+            throw new RuntimeException("Nenhum cliente encontrado com este nome.");
+        }
+
+        return clientes;
+    }
+
 }

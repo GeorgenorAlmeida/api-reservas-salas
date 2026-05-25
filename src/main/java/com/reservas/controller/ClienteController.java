@@ -3,8 +3,10 @@ package com.reservas.controller;
 import com.reservas.entity.Cliente;
 import com.reservas.service.ClienteService;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.http.HttpStatus;
+import java.util.Map;
 import java.util.List;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/clientes")
@@ -49,5 +51,16 @@ public class ClienteController {
             @PathVariable Long id) {
 
         service.excluirCliente(id);
+    }
+
+    @GetMapping("/nome/{nome}")
+    public ResponseEntity<?> consultarPorNome(@PathVariable String nome) {
+
+        try {
+            return ResponseEntity.ok(service.consultarPorNome(nome));
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of("error", e.getMessage()));
+        }
     }
 }

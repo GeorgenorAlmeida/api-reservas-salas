@@ -47,4 +47,5 @@ public class Sala {
     public void setTipoSala(String tipoSala) {
         this.tipoSala = tipoSala;
     }
+
 }
