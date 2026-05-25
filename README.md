@@ -51,7 +51,7 @@ tipoSala
 **Agendamentos**
 codigoAgendamento (pk)(inc)
 codigoCliente (fk - Clientes)
-codigoSala (uq) (fk - Salas)
+codigoSala (uq)(fk - Salas)
 dataAgendamento (uq)
 horaAgendamento (uq)
 statusAgendamento
@@ -68,7 +68,10 @@ Requisitos Funcionais da API
 
 Requisitos Funcionais Especiais da API
 ======================================
-
+1. Sistema deverá consultar todos os agendamentos de uma sala específica;
+2. Sistema deverá consultar a disponibilidade de uma sala específica e também por data e hora (escolhida por um cliente);
+3. Sistema deverá consultar todos os horários agendados de uma sala em um determinado dia;
+4. Sistema deverá listar clientes através de busca pelo nome;
 
 
 
