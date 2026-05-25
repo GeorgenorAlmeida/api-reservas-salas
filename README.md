@@ -27,7 +27,21 @@ Utilizei os padrões Controller (requisições HTTP), Service (Regras de negocio
 Além disto, criei especificamente um controle de exception para garantir uma legibilidade melhor na interpretação de execução de regras de negócio oriundas do banco. Isto permite a personalização do JSON de retorno com mensagens mais personalizadas, traduzindo para os desenvolvedores uma validação melhor na interpretação dos dados.
 
 Para a persistência dos dados, simplifiqui conforme solicitado a utilização no banco de dados H2. Assim, tornou desnecessário para testes a utilização de um banco de dados externo.
-As nomenclatura das tabelas e seus campos modelei em português para facilitar a legibilidade e entendimento funcional do sistema.
 
-Priorizei a simplicidade para que o objetivo do trabalho fosse concluído de maneira eficiente  e também de forma objetiva em alinhamento com todos os requisitos funcionais e não funcionais solicitados no problema.
+As nomenclatura das tabelas e seus campos modelei em português para facilitar a legibilidade e entendimento funcional do sistema.
+Priorizei a simplicidade para que o objetivo do trabalho fosse concluído de maneira eficiente e também de forma objetiva em alinhamento com todos os requisitos funcionais e não funcionais solicitados no problema.
+
+Classes e Relacionamentos
+=========================
+
+Clientes                      Salas                      Agendamentos
+    codigoCliente (pk)           codigoSala (pk)             codigoAgendamento (pk)
+    nome                         nomeSala (uq)               codigoCliente
+    sobrenome                    tipoSala                    codigoSala (uq)
+    cpfCNPJ (uq)                                             dataAgendamento (uq)
+    email                                                    horaAgendamento (uq)
+    telefone                                                 statusAgendamento
+    tipoPessoa
+
+
 
