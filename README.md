@@ -44,8 +44,11 @@ telefone
 tipoPessoa
 
 **Salas**
+
 codigoSala (pk)(inc)
+
 nomeSala (uq)
+
 tipoSala
 
 **Agendamentos**
