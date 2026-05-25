@@ -34,14 +34,41 @@ Priorizei a simplicidade para que o objetivo do trabalho fosse concluído de man
 Classes e Relacionamentos
 =========================
 
-Clientes                      Salas                      Agendamentos
-    codigoCliente (pk)           codigoSala (pk)             codigoAgendamento (pk)
-    nome                         nomeSala (uq)               codigoCliente
-    sobrenome                    tipoSala                    codigoSala (uq)
-    cpfCNPJ (uq)                                             dataAgendamento (uq)
-    email                                                    horaAgendamento (uq)
-    telefone                                                 statusAgendamento
-    tipoPessoa
+**Clientes**                                            
+codigoCliente (pk)(inc)                     
+nome                                        
+sobrenome                                        
+cpfCNPJ (uq)                                             
+email                                                    
+telefone                                                 
+tipoPessoa
+
+**Salas**
+codigoSala (pk)(inc)
+nomeSala (uq)
+tipoSala
+
+**Agendamentos**
+codigoAgendamento (pk)(inc)
+codigoCliente (fk - Clientes)
+codigoSala (uq) (fk - Salas)
+dataAgendamento (uq)
+horaAgendamento (uq)
+statusAgendamento
+
+Requisitos Funcionais da API
+============================
+1. O sistema deve manter um cadastro atualizado de Clientes;
+2. O sistema não devera permitir o cadastramento de dois clientes com o mesmo cpfCNPJ;
+3. O sistema deve manter um cadastro atualizado de Salas;
+4. O sistema não poderá permitir o nome de duas salas em duplicidade;
+5. Os tipos de sala a ser mantido são (COLETIVAS, INDIVIDUAIS, AUDITORIO);
+6. O sistema deverá manter um cadastro atualizado de agendamentos;
+7. Neste cadastro, torna-se obrigatório a inclusão do codigoCliente e codigoSala.
+
+Requisitos Funcionais Especiais da API
+======================================
+
 
 
 
